@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Agrega tus meta y title aquí -->
+</head>
+<body>
+    <header>
+        <!-- ... Tu código actual de navegación ... -->
+    </header>
+    <main>
+        <% productos.forEach(producto => { %>
+            <br>
+            <div>
+                <p>Marca: <%= producto.marca %></p>
+                <p>Modelo: <%= producto.modelo %></p>
+                <p>Precio: <%= producto.precio %></p>
+                <a href="/detalle/<%= producto.id %>">Ver detalle</a>
+            </div>
+        <% }) %>
+    </main>
+    <a href="/create">Create product</a>
+    <footer>
+        <p>Derechos reservados &copy; 2023</p>
+    </footer>
+</body>
+</html>

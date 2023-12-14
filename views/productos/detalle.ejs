@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Agrega tus meta y title aquí -->
+</head>
+<body>
+    <h1>Detalle del Producto</h1>
+    <div>
+        <p>Marca: <%= producto.marca %></p>
+        <p>Modelo: <%= producto.modelo %></p>
+        <p>Precio: <%= producto.precio %></p>
+    </div>
+    <a href="/edit/<%= producto.id %>">Editar</a>
+    <a href="/delete/<%= producto.id %>">Eliminar</a>
+</body>
+</html>
