@@ -10,5 +10,6 @@ router.get('/detalle/:id', productoController.detalle);
 router.get('/edit/:id', productoController.editForm);
 router.post('/edit/:id', productoController.edit);
 router.get('/delete/:id', productoController.delete);
+router.get('/search', productoController.search);
 
 module.exports = router;

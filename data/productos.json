@@ -1,15 +1,15 @@
 [
  {
   "id": 3,
-  "marca": "ariel",
-  "modelo": "heroe",
-  "precio": "200"
+  "marca": "Ariel",
+  "modelo": "Heroe",
+  "precio": "710"
  },
  {
   "id": 4,
-  "marca": "zorro",
-  "modelo": "cloro",
-  "precio": "500"
+  "marca": "Zorro",
+  "modelo": "Claro",
+  "precio": "610"
  },
  {
   "id": 5,
@@ -18,51 +18,21 @@
   "precio": "20000"
  },
  {
-  "id": 6,
-  "marca": "1111111",
-  "modelo": "111111",
-  "precio": "11111111"
- },
- {
-  "id": 7,
-  "marca": "444444",
-  "modelo": "444",
-  "precio": "4444"
- },
- {
-  "id": 8,
-  "marca": "aaa",
-  "modelo": "aaa",
-  "precio": "333333333"
- },
- {
-  "id": 9,
-  "marca": "BBBBBBB",
-  "modelo": "BBBBBBBB",
-  "precio": "2626226226"
- },
- {
   "id": 10,
   "marca": "X28",
   "modelo": "X26-A",
-  "precio": "100"
- },
- {
-  "id": 11,
-  "marca": "ff",
-  "modelo": "ff",
-  "precio": "22"
- },
- {
-  "id": 12,
-  "marca": "1",
-  "modelo": "11",
-  "precio": "1"
+  "precio": "200"
  },
  {
   "id": 13,
   "marca": "Nete",
   "modelo": "Nete",
   "precio": "10000000000"
+ },
+ {
+  "id": 6,
+  "marca": "Ariel",
+  "modelo": "ffffffº",
+  "precio": "200"
  }
 ]

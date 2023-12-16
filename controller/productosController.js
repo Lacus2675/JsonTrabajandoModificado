@@ -4,12 +4,15 @@ const productosFilePath = path.join(__dirname, '../data/productos.json');
 let productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 const productosController = {
+
     list: (req, res) => {
         res.render('home', { productos });
     },
+
     create: (req, res) => {
-        res.render('productos/creacionProd');
+        res.render('creacionProd');
     },
+
     stock: (req, res) => {
         const { marca, modelo, precio } = req.body;
         const newProduct = {
@@ -22,26 +25,29 @@ const productosController = {
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, ' '));
         res.redirect('/');
     },
+    
     detalle: (req, res) => {
         const productId = parseInt(req.params.id);
         const producto = productos.find((p) => p.id === productId);
 
         if (producto) {
-            res.render('productos/detalle', { producto });
+            res.render('detalle', { producto });
         } else {
             res.status(404).send('Producto no encontrado');
         }
     },
+    
     editForm: (req, res) => {
         const productId = parseInt(req.params.id);
         const producto = productos.find((p) => p.id === productId);
 
         if (producto) {
-            res.render('productos/editarProd', { producto });
+            res.render('editarProd', { producto });
         } else {
             res.status(404).send('Producto no encontrado');
         }
     },
+    
     edit: (req, res) => {
         const productId = parseInt(req.params.id);
         const { marca, modelo, precio } = req.body;
@@ -63,6 +69,7 @@ const productosController = {
             res.status(404).send('Producto no encontrado');
         }
     },
+
     delete: (req, res) => {
         const productId = parseInt(req.params.id);
 
@@ -79,6 +86,19 @@ const productosController = {
             res.status(404).send('Producto no encontrado');
         }
     },
-};
+
+        search: (req, res) => {
+            const searchTerm = req.query.q; // Obtener el término de búsqueda desde la consulta
+            const filteredProductos = productos.filter(producto =>
+                producto.marca.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                producto.modelo.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+    
+            res.render('home', { productos: filteredProductos, searchTerm });
+        }
+        
+    
+    };
+
 
 module.exports = productosController;
